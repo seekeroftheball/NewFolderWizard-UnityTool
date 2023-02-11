@@ -1,3 +1,5 @@
+Author: https://github.com/seekeroftheball    https://gist.github.com/seekeroftheball
+
 # NewFolderWizard - v1.1
 An organizational tool for the Unity Game Engine for quickly importing and customizing your personal folder structure into every project.
 
