@@ -27,8 +27,9 @@ Customize template to your liking.
 
 ## Update 1.1 Notes
 
-- Added select/unselect all feature to selection menu
-- Added horizontal scroll to selection menu
+- Added select/unselect all feature to checkbox selection menu
+- Added horizontal scroll to checkbox selection menu
+- Added an optional .unitypackage version of plugin
 - Fixed notes on the demo root directory
 - Added placeholder file to the empty demo folder to fix issue with it not uploading to GitHub
 - Removed empty variables leftover from development
