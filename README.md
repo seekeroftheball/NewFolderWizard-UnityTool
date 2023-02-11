@@ -1,4 +1,4 @@
-# NewFolderWizard
+# NewFolderWizard - v1.1
 An organizational tool for the Unity Game Engine for quickly importing and customizing your personal folder structure into every project.
 
 Save and reuse your templates. Templates are saved as ScriptableObjects and may be customized to your liking. 
@@ -24,3 +24,16 @@ Create nested folder hierarchies.
 Customize template to your liking.
 
 ![03 Create New Folder Templates to be Used in All New Projects](https://user-images.githubusercontent.com/8204808/217860142-8d9217cc-448a-45f4-8030-69eaa96494f8.gif)
+
+## Update 1.1 Notes
+
+- Added select/unselect all feature to selection menu
+- Added horizontal scroll to selection menu
+- Fixed notes on the demo root directory
+- Added placeholder file to the empty demo folder to fix issue with it not uploading to GitHub
+- Removed empty variables leftover from development
+- Other minor cosmetic improvements
+
+![04 Update 1 1 - Select All](https://user-images.githubusercontent.com/8204808/218281092-0e09c2fb-9853-473b-a214-2800c2c1fc6d.gif)
+
+Known issues: Infinite loop possible by placing a parent as the child of it's own child directory. This will crash the editor.
