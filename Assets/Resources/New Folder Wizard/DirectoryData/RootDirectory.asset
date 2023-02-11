@@ -1,0 +1,43 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea892b54eeef74b6989e615f1df83be8, type: 3}
+  m_Name: RootDirectory
+  m_EditorClassIdentifier: 
+  editorNotes: "The first Directory called by name in CreateFolderHierarchy.cs\n\nBe
+    sure to change the const value 'RootDirectoryFileName' in FilePaths.cs if you
+    change the name of this object.\n\ndefault path: \nPlugins/New Folder Wizard/Scripts/FilePaths.cs\n\nIn
+    this demonstration the RootDirectory creates a list of flat folders, with the
+    exception of the Audio folder that will have child folders."
+  Folders:
+    m_keys:
+    - Audio
+    - Editor
+    - Materials
+    - Prefabs
+    - Scripts
+    - Shaders
+    - Textures
+    m_values:
+    - IsEnabled: 0
+      ChildDirectoryData: {fileID: 11400000, guid: 610fb0fcd291d4d6098e6554251b4179, type: 2}
+    - IsEnabled: 0
+      ChildDirectoryData: {fileID: 0}
+    - IsEnabled: 0
+      ChildDirectoryData: {fileID: 0}
+    - IsEnabled: 0
+      ChildDirectoryData: {fileID: 0}
+    - IsEnabled: 0
+      ChildDirectoryData: {fileID: 0}
+    - IsEnabled: 0
+      ChildDirectoryData: {fileID: 0}
+    - IsEnabled: 0
+      ChildDirectoryData: {fileID: 0}
