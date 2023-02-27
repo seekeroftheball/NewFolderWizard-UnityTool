@@ -3,6 +3,9 @@ using SerializableDictionary;
 
 namespace NewFolderWizard
 {
+    /// <summary>
+    /// ScriptableObject housing for serializable dictionary of folder properties.
+    /// </summary>
     [CreateAssetMenu(fileName = "Directory", menuName = "New Folder Wizard/Directory Data")]
     public class DirectoryData : ScriptableObject
     {
@@ -13,6 +16,10 @@ namespace NewFolderWizard
         public SerializableDictionary<string, FolderProperties> Folders = new();
     }
 
+    /// <summary>
+    /// Folder property data contains an 'enable' toggle and child directory data.
+    /// This allows for each folder to be toggled individually and the toggle state to be cached.
+    /// </summary>
     [System.Serializable]
     public struct FolderProperties
     {

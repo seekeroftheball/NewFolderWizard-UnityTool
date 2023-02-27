@@ -1,5 +1,8 @@
 ﻿namespace NewFolderWizard
 {
+    /// <summary>
+    /// All file paths for directories and menu items.
+    /// </summary>
     struct FilePaths
     {
         private const string RootDirectoryFileName = "RootDirectory";
