@@ -45,4 +45,5 @@ Customize template to your liking.
 - Alphabetized folder list in checkbox selection menu using a LINQ query
 - Added horizontal rule below select all option in checkbox selection menu
 
-Known issues: Infinite loop possible by placing a parent as the child of it's own child directory. This will crash the editor.
+## Known issues
+- Infinite loop possible by placing a parent as the child of it's own child directory. This will crash the editor.
