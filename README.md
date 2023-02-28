@@ -1,6 +1,6 @@
 Author: https://github.com/seekeroftheball    https://gist.github.com/seekeroftheball
 
-# NewFolderWizard - v1.1
+# NewFolderWizard - v1.2 (Updated March 2023)
 An organizational tool for the Unity Game Engine for quickly importing and customizing your personal folder structure into every project.
 
 Save and reuse your templates. Templates are saved as ScriptableObjects and may be customized to your liking. 
@@ -38,5 +38,11 @@ Customize template to your liking.
 - Other minor cosmetic improvements
 
 ![04 Update 1 1 - Select All](https://user-images.githubusercontent.com/8204808/218281092-0e09c2fb-9853-473b-a214-2800c2c1fc6d.gif)
+
+## Update 1.2 Notes
+
+- Improved code documentation
+- Alphabetized folder list in checkbox selection menu using a LINQ query
+- Added horizontal rule below select all option in checkbox selection menu
 
 Known issues: Infinite loop possible by placing a parent as the child of it's own child directory. This will crash the editor.
