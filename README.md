@@ -27,6 +27,12 @@ Customize template to your liking.
 
 ![03 Create New Folder Templates to be Used in All New Projects](https://user-images.githubusercontent.com/8204808/217860142-8d9217cc-448a-45f4-8030-69eaa96494f8.gif)
 
+## Update 1.2 Notes
+
+- Improved code documentation
+- Alphabetized folder list in checkbox selection menu using a LINQ query
+- Added horizontal rule below select all option in checkbox selection menu
+
 ## Update 1.1 Notes
 
 - Added select/unselect all feature to checkbox selection menu
@@ -39,11 +45,5 @@ Customize template to your liking.
 
 ![04 Update 1 1 - Select All](https://user-images.githubusercontent.com/8204808/218281092-0e09c2fb-9853-473b-a214-2800c2c1fc6d.gif)
 
-## Update 1.2 Notes
-
-- Improved code documentation
-- Alphabetized folder list in checkbox selection menu using a LINQ query
-- Added horizontal rule below select all option in checkbox selection menu
-
-## Known issues
+## Known Issues
 - Infinite loop possible by placing a parent as the child of it's own child directory. This will crash the editor.
