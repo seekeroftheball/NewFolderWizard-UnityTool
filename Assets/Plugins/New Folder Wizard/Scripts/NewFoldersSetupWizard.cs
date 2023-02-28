@@ -1,9 +1,10 @@
 //Author : https://github.com/seekeroftheball   https://gist.github.com/seekeroftheball
-//Version : 1.1
-//Updated : Feb 2023
+//Version : 1.2
+//Updated : March 2023
 
-using UnityEngine;
+using System.Linq;
 using SerializableDictionary;
+using UnityEngine;
 
 namespace NewFolderWizard
 {
@@ -21,7 +22,7 @@ namespace NewFolderWizard
             public FolderProperties NewFolderProperties;            
         }
 
-        public static DirectoryData RootDirectory;
+        public static DirectoryData RootDirectory;  // Local cache
 
         /// <summary>
         /// Load the root directory from the Resources folder.
@@ -52,7 +53,10 @@ namespace NewFolderWizard
             ToggleData toggleData = new();
             parentFolder += parentFolder.Equals(string.Empty) ? string.Empty : "/";
 
-            foreach (var keyValuePair in directory.Folders)
+            // Sort folders by name with LINQ
+            var sortedDictionary = from entry in directory.Folders orderby entry.Key ascending select entry;
+
+            foreach (var keyValuePair in sortedDictionary)
             {
                 string folderName = keyValuePair.Key;
                 FolderProperties folderProperties = keyValuePair.Value;
@@ -105,7 +109,7 @@ namespace NewFolderWizard
             parentFolder += parentFolder.Equals(string.Empty) ? string.Empty : "/";
 
             // Local cache
-            SerializableDictionary<string, FolderProperties> directoryFolders = new(directory.Folders);
+            SerializableDictionary<string, FolderProperties> directoryFolders = new(directory.Folders); 
 
             foreach (var keyValuePair in directory.Folders)
             {
@@ -116,7 +120,7 @@ namespace NewFolderWizard
                 toggleData.NewFolderProperties.IsEnabled = isTrue;
                 toggleData.NewFolderProperties.ChildDirectoryData = folderProperties.ChildDirectoryData;
 
-                directoryFolders[folderName] = toggleData.NewFolderProperties;
+                directoryFolders[folderName] = toggleData.NewFolderProperties;                
 
                 // Parse children
                 if (folderProperties.ChildDirectoryData && !folderProperties.ChildDirectoryData.Equals(directory))

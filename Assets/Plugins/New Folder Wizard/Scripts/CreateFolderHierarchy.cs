@@ -1,6 +1,6 @@
 //Author : https://github.com/seekeroftheball   https://gist.github.com/seekeroftheball
-//Version : 1.1
-//Updated : Feb 2023
+//Version : 1.2
+//Updated : March 2023
 
 using UnityEditor;
 using UnityEngine;

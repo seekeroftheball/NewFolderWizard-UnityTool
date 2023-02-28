@@ -12,8 +12,8 @@ namespace NewFolderWizard
         [SerializeField, TextArea(2, 11)] private string editorNotes;
         [Space(10)]
         [Header("ADD FOLDERS AND CHILD DIRECTORIES TO THIS DIRECTORY", order = 0)]
-        [Header("New Folder Name, *Child Directory Data (*optional)", order = 1)]
-        public SerializableDictionary<string, FolderProperties> Folders = new();
+        [Header("New Folder Name, *Child Directory Data (*optional)", order = 1)]        
+        public SerializableDictionary<string, FolderProperties> Folders = new();    // Dictionary of folder names with 'enable' toggle and child directory information.
     }
 
     /// <summary>

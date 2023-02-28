@@ -1,6 +1,6 @@
 //Author : https://github.com/seekeroftheball   https://gist.github.com/seekeroftheball
-//Version : 1.1
-//Updated : Feb 2023
+//Version : 1.2
+//Updated : March 2023
 
 using UnityEditor;
 using UnityEngine;
@@ -17,13 +17,13 @@ namespace NewFolderWizard
         /// </summary>
         private struct WindowBounds
         {
-            public const float WindowWidth = 280;
-            public const float WindowHeight = 266;
+            public const float WindowWidth = 300;
+            public const float WindowHeight = 300;
 
             public static Vector2 WindowSize = new(WindowWidth, WindowHeight);
 
             public static Vector2 ScrollPosition;
-            public const float ScrollViewHeight = 184;
+            public const float ScrollViewHeight = 200;
         }
 
         private static bool SelectAll;
@@ -42,7 +42,7 @@ namespace NewFolderWizard
         /// </summary>
         private void Awake()
         {
-            NewFoldersSetupWizard.LoadDirectories();
+            NewFoldersSetupWizard.LoadDirectories(); 
         }
 
         // Draw the editor window
@@ -65,14 +65,15 @@ namespace NewFolderWizard
             if (!selectAllCache.Equals(SelectAll))
                 NewFoldersSetupWizard.SelectAllChanged(SelectAll);
 
-            GUILayout.Space(4);
+            // Horizontal Line
+            EditorGUILayout.LabelField("", GUI.skin.horizontalSlider);
 
             // Scroll
             WindowBounds.ScrollPosition = GUILayout.BeginScrollView(WindowBounds.ScrollPosition, true, true, GUILayout.Width(WindowBounds.WindowWidth), GUILayout.Height(WindowBounds.ScrollViewHeight));
 
             // Draw folder list
             NewFoldersSetupWizard.ParseRootDirectory();
-
+            
             GUILayout.Space(2);
             GUILayout.EndScrollView();
             GUILayout.Space(2);
@@ -82,7 +83,7 @@ namespace NewFolderWizard
             {
                 CreateFolderHierarchy.CreateFolders();
                 Close();
-            }                         
+            }
         }
 
         /// <summary>
@@ -95,6 +96,6 @@ namespace NewFolderWizard
             NewFolderWizardSetupWindow popupModal = (NewFolderWizardSetupWindow)GetWindow(typeof(NewFolderWizardSetupWindow), true, "New Folder Wizard", true);
             popupModal.ShowModalUtility();
             popupModal.Focus();
-        }        
-    }
+        }
+    }    
 }
