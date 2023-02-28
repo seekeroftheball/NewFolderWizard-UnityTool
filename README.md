@@ -33,6 +33,8 @@ Customize template to your liking.
 - Alphabetized folder list in checkbox selection menu using a LINQ query
 - Added horizontal rule below select all option in checkbox selection menu
 
+![New-Folder-Wizard-1 2](https://user-images.githubusercontent.com/8204808/221923595-a1d5db3d-196c-401a-a49b-2aa7adc9ddc8.png)
+
 ## Update 1.1 Notes
 
 - Added select/unselect all feature to checkbox selection menu
